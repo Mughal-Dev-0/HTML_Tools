@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>HTML Code Generator Tools</title>
+</head>
+<body>
+  <h1>HTML Code Generator Tools</h1>
+  <!-- toggle theme -->
+<button onclick="toggleTheme()">Toggle Light/Dark Theme</button>
+  <!-- IFRAME Generator -->
+  <div class="tool">
+    <h2>Iframe Generator</h2>
+    <label>Src:</label><input id="iframeSrc" type="text" placeholder="https://example.com" />
+    <label>Width:</label><input id="iframeWidth" type="text" placeholder="600px or 100%" />
+    <label>Height:</label><input id="iframeHeight" type="text" placeholder="400px" />
+    <label>Allow Fullscreen:</label><select id="iframeAllow"><option value="true">Yes</option><option value="">No</option></select>
+    <button onclick="generateIframe()">Generate Iframe</button>
+    <pre id="iframeCode"></pre>
+  </div>
+
+  <!-- List Generator -->
+  <div class="tool">
+    <h2>List Generator</h2>
+    <label>Type:</label><select id="listType"><option value="ul">Unordered</option><option value="ol">Ordered</option></select>
+    <label>Items (comma separated):</label><input id="listItems" type="text" placeholder="Item1, Item2, Item3" />
+    <button onclick="generateList()">Generate List</button>
+    <pre id="listCode"></pre>
+  </div>
+
+  <!-- Table Generator -->
+  <div class="tool">
+    <h2>Table Generator</h2>
+    <label>Rows:</label><input id="tableRows" type="number" placeholder="e.g. 3" />
+    <label>Columns:</label><input id="tableCols" type="number" placeholder="e.g. 4" />
+    <button onclick="generateTable()">Generate Table</button>
+    <pre id="tableCode"></pre>
+  </div>
+
+  <!-- Image/Link Generator -->
+  <div class="tool">
+    <h2>Image and Link Generator</h2>
+    <label>Image URL:</label><input id="imgUrl" type="text" placeholder="https://..." />
+    <label>Alt Text:</label><input id="imgAlt" type="text" placeholder="Image description" />
+    <label>Link URL:</label><input id="linkUrl" type="text" placeholder="https://..." />
+    <label>Link Text:</label><input id="linkText" type="text" placeholder="Click Here" />
+    <button onclick="generateImageLink()">Generate Code</button>
+    <pre id="imgLinkCode"></pre>
+  </div>
+  
+    <!-- Navbar Generator -->
+  <div class="tool">
+    <h2>Navbar Generator</h2>
+    <label>Logo Text (optional):</label><input id="navLogoText" type="text" placeholder="MySite" />
+    <label>Logo Image URL (optional):</label><input id="navLogoImg" type="text" placeholder="https://... (optional)" />
+    <label>Menu Items (comma separated):</label><input id="navItems" type="text" placeholder="Home, About, Contact" />
+    <label>Menu Links (comma separated):</label><input id="navLinks" type="text" placeholder="/home, /about, /contact" />
+    <button onclick="generateNavbar()">Generate Navbar</button>
+    <pre id="navbarCode"></pre>
+  </div>
+  
+    <!-- Button Generator -->
+  <div class="tool">
+    <h2>Button Generator</h2>
+    <label>Button Text:</label><input id="btnText" type="text" placeholder="Click Me" />
+    <label>Button Type:</label>
+    <select id="btnType">
+      <option value="default">Default</option>
+      <option value="shadow">With Shadow</option>
+      <option value="link">Link Button</option>
+      <option value="rounded">Rounded</option>
+    </select>
+    <label>Link URL (if Link Button):</label><input id="btnLink" type="text" placeholder="https://..." />
+    <button onclick="generateButton()">Generate Button</button>
+    <pre id="buttonCode"></pre>
+  </div>
+
+  <!-- Form Input Generator -->
+  <div class="tool">
+    <h2>Form Generator</h2>
+    <label>Number of Input Fields:</label><input id="formCount" type="number" />
+    <label>Input Field Types (comma separated, e.g., text,email,password):</label><input id="formTypes" type="text" />
+    <label>Input Labels (comma separated):</label><input id="formLabels" type="text" />
+    <button onclick="generateForm()">Generate Form</button>
+    <pre id="formCode"></pre>
+  </div>
+
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
